@@ -1,6 +1,6 @@
 suites:
     default:
-        namespace: Cjm\Behat\LocalWebserverExtension
-        psr4_prefix: Cjm\Behat\LocalWebserverExtension
+        namespace: WalterDolce\Behat\SeleniumServerExtension
+        psr4_prefix: WalterDolce\Behat\SeleniumServerExtension
 extensions:
   - Cjm\PhpSpec\Extension\TypeHintedMethodsExtension
