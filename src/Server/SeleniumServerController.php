@@ -1,12 +1,11 @@
 <?php
 
-namespace Cjm\Behat\LocalWebserverExtension\Webserver;
+namespace WalterDolce\Behat\SeleniumServerExtension\Server;
 
 use Symfony\Component\Process\PhpExecutableFinder;
 use Symfony\Component\Process\Process;
-use Symfony\Component\Yaml\Exception\RuntimeException;
 
-final class BuiltInWebserverController implements WebserverController
+final class SeleniumServerController implements ServerController
 {
     /**
      * @var Process
@@ -54,7 +53,7 @@ final class BuiltInWebserverController implements WebserverController
              $this->config->getRouter()
         );
 
-        return escapeshellcmd(trim($command));
+        return escapeshellcmd(trim('exec java -jar selenium-server-standalone-3.4.0.jar'));
     }
 
     /**
@@ -62,7 +61,8 @@ final class BuiltInWebserverController implements WebserverController
      */
     private function portIsAcceptingConnections()
     {
-        return @fsockopen($this->config->getHost(), $this->config->getPort());
+//        return @fsockopen($this->config->getHost(), $this->config->getPort());
+        return @fsockopen('localhost', '4444');
     }
 
     private function waitForServerToSTart()
@@ -73,7 +73,7 @@ final class BuiltInWebserverController implements WebserverController
                 sleep(0.1);
                 continue;
             }
-            throw new \RuntimeException('Webserver did not start within 5 seconds: ' . $this->process->getErrorOutput());
+            throw new \RuntimeException('Server did not start within 5 seconds: ' . $this->process->getErrorOutput());
         }
     }
 

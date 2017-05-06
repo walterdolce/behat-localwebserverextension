@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Cjm\Behat\LocalWebserverExtension\Suite;
+namespace spec\WalterDolce\Behat\SeleniumServerExtension\Suite;
 
 use Behat\Testwork\Suite\Suite;
 use PhpSpec\ObjectBehavior;
@@ -17,7 +17,7 @@ class SuiteIdentifierSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Cjm\Behat\LocalWebserverExtension\Suite\SuiteIdentifier');
+        $this->shouldHaveType('WalterDolce\Behat\SeleniumServerExtension\Suite\SuiteIdentifier');
     }
 
     function it_knows_if_a_suite_needs_a_webserver(Suite $suite)

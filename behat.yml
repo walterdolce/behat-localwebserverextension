@@ -5,6 +5,7 @@ default:
       port: 8080
       docroot: %paths.base%/features/bootstrap/web
       router: ~
+    WalterDolce\Behat\SeleniumServerExtension: ~
 mink:
   suites:
     mink:

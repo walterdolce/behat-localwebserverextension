@@ -1,6 +1,6 @@
 <?php
 
-namespace Cjm\Behat\LocalWebserverExtension\Webserver;
+namespace WalterDolce\Behat\SeleniumServerExtension\Server;
 
 final class DefaultConfiguration implements Configuration
 {

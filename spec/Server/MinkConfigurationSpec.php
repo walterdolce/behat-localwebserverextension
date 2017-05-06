@@ -1,8 +1,8 @@
 <?php
 
-namespace spec\Cjm\Behat\LocalWebserverExtension\Webserver;
+namespace spec\WalterDolce\Behat\SeleniumServerExtension\Server;
 
-use Cjm\Behat\LocalWebserverExtension\Webserver\Configuration;
+use WalterDolce\Behat\SeleniumServerExtension\Server\Configuration;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -15,7 +15,7 @@ class MinkConfigurationSpec extends ObjectBehavior
 
     function it_is_a_webserver_configuration()
     {
-        $this->shouldHaveType('Cjm\Behat\LocalWebserverExtension\Webserver\Configuration');
+        $this->shouldHaveType('WalterDolce\Behat\SeleniumServerExtension\Server\Configuration');
     }
 
     function it_gets_the_host_from_the_baseurl()

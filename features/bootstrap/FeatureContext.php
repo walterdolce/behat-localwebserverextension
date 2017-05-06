@@ -1,10 +1,7 @@
 <?php
 
-use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
 use Behat\Behat\Context\SnippetAcceptingContext;
-use Behat\Gherkin\Node\PyStringNode;
-use Behat\Gherkin\Node\TableNode;
 
 class FeatureContext implements Context, SnippetAcceptingContext
 {
@@ -25,6 +22,17 @@ class FeatureContext implements Context, SnippetAcceptingContext
     {
         if (!$this->content) {
             throw new Exception('Received no response from http://localhost:8080');
+        }
+    }
+
+    /**
+     * @Then the Selenium server starts
+     */
+    public function theSeleniumServerStarts()
+    {
+        $content = @file_get_contents('http://localhost:4444');
+        if (!$content) {
+            throw new Exception('Received no response from http://localhost:4444');
         }
     }
 }

@@ -1,10 +1,8 @@
 <?php
 
-namespace spec\Cjm\Behat\LocalWebserverExtension\Webserver;
+namespace spec\WalterDolce\Behat\SeleniumServerExtension\Server;
 
-use Cjm\Behat\LocalWebserverExtension\Webserver\Configuration;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class BasicConfigurationSpec extends ObjectBehavior
 {
@@ -15,7 +13,7 @@ class BasicConfigurationSpec extends ObjectBehavior
 
     function it_is_a_webserver_configuration()
     {
-        $this->shouldHaveType('Cjm\Behat\LocalWebserverExtension\Webserver\Configuration');
+        $this->shouldHaveType('WalterDolce\Behat\SeleniumServerExtension\Server\Configuration');
     }
 
     function it_defaults_the_port_to_null()

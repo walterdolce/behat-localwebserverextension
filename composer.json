@@ -1,9 +1,9 @@
 {
-    "name": "ciaranmcnulty/behat-localwebserverextension",
+    "name": "walterdolce/behat-seleniumserverextension",
     "type": "library",
-    "description": "Extension for behat users who forget to start their webserver",
-    "keywords": ["tdd","bdd","behat"],
-    "homepage": "http://github.com/ciaranmcnulty/behat-localwebserverextension",
+    "description": "A behat extension for people who forget to download & start the selenium server",
+    "keywords": ["tdd","bdd","behat", "selenium", "testing", "firefox", "chrome"],
+    "homepage": "https://github.com/walterdolce/behat-seleniumserverextension",
     "license": "MIT",
     "authors": [
         {
@@ -11,14 +11,21 @@
             "email": "mail@ciaranmcnulty.com",
             "homepage": "http://ciaranmcnulty.com",
             "role": "Developer"
+        },
+        {
+            "name": "Walter Dolce",
+            "email": "walterdolce@gmail.com",
+            "homepage": "https://github.com/walterdolce",
+            "role": "Developer"
         }
     ],
     "require" : {
-        "php" : "^5.4||~7.0",
+        "php" : "^5.4||~7.0||~7.1",
         "behat/behat" : "~3.0",
         "symfony/process" : "~2.3||~3.0"
     },
     "require-dev": {
+        "ciaranmcnulty/behat-localwebserverextension": "~1.0",
         "ciaranmcnulty/phpspec-typehintedmethods" : "~1.0",
         "phpspec/phpspec": "~2.1",
         "behat/mink-extension": "~2.0",
@@ -29,7 +36,7 @@
     },
     "autoload": {
         "psr-4" : {
-            "Cjm\\Behat\\LocalWebserverExtension\\" : "src"
+            "WalterDolce\\Behat\\SeleniumServerExtension\\" : "src"
         }
     }
 }
